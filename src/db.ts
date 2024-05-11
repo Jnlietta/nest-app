@@ -14,7 +14,7 @@ export interface Order {
 
 type DBData = {
   products: Product[];
-  orders?: Order[];
+  orders: Order[];
 };
 
 export const db: DBData = {
