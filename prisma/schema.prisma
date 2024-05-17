@@ -32,8 +32,8 @@ model Order {
   id        String  @id @default(uuid())
   product   Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
   productId String?
-  client    Client @relation(fields: [clientId], references: [id])
-  clientId  String
+  client    Client? @relation(fields: [clientId], references: [id])
+  clientId  String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
